@@ -10,3 +10,29 @@
 {
 	border: ridge black;
 }
+
+.table
+{
+	margin: 0 auto;
+	width: 66%;
+	text-align: center;
+	height: ;
+	border: ridge black;
+}
+
+th
+{
+	border: outset black;
+}
+
+h1
+{
+	font-size: 200%;
+	text-align: center;
+}
+
+h3
+{
+	text-align: center;
+	font-size: 200%;
+}
