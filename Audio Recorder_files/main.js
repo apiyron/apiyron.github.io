@@ -37,7 +37,7 @@ var started = false;
 // Recogniser doesn't stop listening even if the user pauses
 recognizer.continuous = true;
 
-recognizer.lang = "en-GB";
+recognizer.lang = "ru-RU";
 
 recognizer.onerror = function(event) {
   alert('Recognition error: ' + event.message);
@@ -120,7 +120,7 @@ document.getElementById('record').addEventListener('click', function() {
   // recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
 });
 
-	
+
 
 /* TODO:
 
@@ -181,7 +181,7 @@ function sendWord(data, num){
 			}
 			else i++;
 			}
-			
+
 			var photos = document.getElementsByClassName("canvaz");
 			var tags = document.getElementsByClassName("tag");
 			photos[num].style.backgroundImage="url("+url+")";
@@ -234,7 +234,7 @@ function gotBuffers( buffers ) {
 
 	drawBuffer( canvas.width, canvas.height, canvas.getContext('2d'), buffers[0] );
 
-	// the ONLY time gotBuffers is called is right after a new recording is completed - 
+	// the ONLY time gotBuffers is called is right after a new recording is completed -
 	// so here's where we should set up the download.
 	audioRecorder.exportWAV( doneEncoding );
 }
@@ -309,7 +309,7 @@ function updateAnalysers(time) {
 		var numBars = Math.round(canvasWidth / SPACING);
 		var freqByteData = new Uint8Array(analyserNode.frequencyBinCount);
 
-		analyserNode.getByteFrequencyData(freqByteData); 
+		analyserNode.getByteFrequencyData(freqByteData);
 
 		analyserContext.clearRect(0, 0, canvasWidth, canvasHeight);
 		analyserContext.fillStyle = '#F6D565';
@@ -329,7 +329,7 @@ function updateAnalysers(time) {
 			analyserContext.fillRect(i * SPACING, canvasHeight, BAR_WIDTH, -magnitude);
 		}
 	}
-	
+
 	rafID = window.requestAnimationFrame( updateAnalysers );
 }
 
@@ -379,7 +379,7 @@ function initAudio() {
 			navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
 
 		if (navigator.getUserMedia) {
-			
+
 			 navigator.getUserMedia(
 		{
 			"audio": {
