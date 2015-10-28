@@ -37,7 +37,7 @@ var started = false;
 // Recogniser doesn't stop listening even if the user pauses
 recognizer.continuous = true;
 
-recognizer.lang = "ru-RU";
+recognizer.lang = "en-GB";
 
 recognizer.onerror = function(event) {
   alert('Recognition error: ' + event.message);
