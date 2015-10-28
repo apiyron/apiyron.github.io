@@ -3,7 +3,6 @@
 	margin: 0 auto;
 	width: 33%;
 	text-align: center;
-	height: ;
 }
 
 .buttonblock
@@ -18,6 +17,15 @@
 	text-align: center;
 	height: ;
 	border: ridge black;
+}
+
+.logo
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
 th
