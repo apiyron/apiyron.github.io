@@ -2,7 +2,7 @@
 <!-- saved from url=(0057)http://webaudiodemos.appspot.com/AudioRecorder/index.html -->
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Super Audio Recorder</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -20,7 +20,17 @@
 		<script src="src/audiodisplay.js"></script>
 		<script src="src/recorder.js"></script>
 		<script src="src/main.js"></script>
-
+		<div align="center" class="button">
+				<button>Произнести</button>
+		</div>
+		<script type="text/javascript">
+			document.getElementsByTagName('button').addEventListener('click', function() {
+				var u = new SpeechSynthesisUtterance();
+				u.text = document.getElementById('output').value;
+				u.lang = 'ru-RU';
+				speechSynthesis.speak(u);
+			}
+		</script>
 		<!-- <div id="viz">
 			<div id="photos">
 				<div class="wrap">
@@ -46,8 +56,6 @@
 			<canvas id="wavedisplay" width="1024" height="500"></canvas> -->
 
 		<!-- </div>
-
-
 
 	</body>
 </html>
