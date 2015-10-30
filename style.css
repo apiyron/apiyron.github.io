@@ -36,8 +36,7 @@ body {
 }
 textarea {
 	display: inline-block;
-	width: 30%;
-	height: auto;
+	width: 95%;
 	min-height: 10vh;
 	box-shadow: 0px 0px 10px blue;
 	font-size: 1em;
