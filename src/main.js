@@ -95,7 +95,7 @@ document.getElementById('record').addEventListener('click', function() {
 	}else {
 		this.classList.add('recording');
 		started = true;
-		output.textContent = '';
+		//output.textContent = '';
 		  recognizer.interimResults = true;
 		  recognizer.start();
 
