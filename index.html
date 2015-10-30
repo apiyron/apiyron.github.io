@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
-		<textarea id="output"></textarea>
+		<textarea id="output" wrap="off"></textarea>
 
 		<div id="controls">
 			<img id="record" src="src/mic.svg"  class="">
@@ -34,15 +34,15 @@
 		</script>
 
 		<script>
-		function sendMail() {
-			var link = "mailto:your@mail.com"
-						 + "?cc="
-						 + "&subject=" + escape("Speech Recognition Results")
-						 + "&body=" + escape(document.getElementById('output').value)
-						 ;
+			function sendMail() {
+				var link = "mailto:your@mail.com"
+							 + "?cc="
+							 + "&subject=" + escape("Speech Recognition Results")
+							 + "&body=" + escape(document.getElementById('output').value)
+							 ;
 
-			window.location.href = link;
-		}
+				window.location.href = link;
+			}
 		</script>
 </body>
 </html>
