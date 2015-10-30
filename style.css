@@ -49,7 +49,7 @@ textarea {
 	height: 20%;
 	width: 100%;
 	margin-left: auto;
-	margin-top: 3vh;
+	margin-top: 2vh;
 	margin-right: auto;
 }
 #record {
@@ -63,6 +63,11 @@ textarea {
 }
 #play {
 	height: 12vh;
+}
+#email {
+	height: 12vh;
+	width: 12vh;
+	margin-top: 0.1vh;
 }
 #save, #save img { height: 10vh; }
 #save { opacity: 0.25;}

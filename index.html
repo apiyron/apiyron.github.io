@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)http://webaudiodemos.appspot.com/AudioRecorder/index.html -->
+<!-- saved from http://webaudiodemos.appspot.com/AudioRecorder/index.html -->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,15 +7,19 @@
 		<title>Speech Recogniser</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+<body>
 		<textarea id="output"></textarea>
 
 		<div id="controls">
 			<img id="record" src="src/mic.svg"  class="">
 			<img id="play" src="src/play.svg"  class="">
+			<img onclick="sendMail(); return false" id="email" src="src/email.svg">
 		</div>
 
 		<div id="text"></div>
+		<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
+
+
 		<script src="src/audiodisplay.js"></script>
 		<script src="src/recorder.js"></script>
 		<script src="src/main.js"></script>
@@ -28,32 +32,17 @@
 				speechSynthesis.speak(u);
 			})
 		</script>
-		<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
-		<!-- <div id="viz">
-			<div id="photos">
-				<div class="wrap">
-					<div class="canvaz"></div>
-					<textarea class="tag"></textarea>
-				</div>
-				<div class="wrap" style="display: none">
-					<div class="canvaz"></div>
-					<textarea class="tag"></textarea>
-				</div>
-				<div class="wrap" style="display: none">
-					<div class="canvaz"></div>
-					<textarea class="tag"></textarea>
-				</div>
-			</div> -->
 
-			<!-- <div id="tags">
-				<div class="tag"></div>
-				<div class="tag"></div>
-				<div class="tag"></div>
-			</div> -->
-			<!-- <canvas id="analyser" width="1024" height="500"></canvas>
-			<canvas id="wavedisplay" width="1024" height="500"></canvas> -->
+		<script>
+		function sendMail() {
+			var link = "mailto:your@mail.com"
+						 + "?cc="
+						 + "&subject=" + escape("Speech Recognition Results")
+						 + "&body=" + escape(document.getElementById('output').value)
+						 ;
 
-		<!-- </div>
-
-	</body>
+			window.location.href = link;
+		}
+		</script>
+</body>
 </html>

@@ -48,16 +48,6 @@ recognizer.onresult = function(event) {
 
   for (var i = event.resultIndex; i < event.results.length; i++) {
 	if (event.results[i].isFinal) {
-		// if ((event.results[i][0].transcript == 'Russian') && (recognizer.lang == 'en-GB')) {
-		// 	started = false;
-		// 	recognizer.stop();
-		// 	recognizer.lang == 'ru-RU';
-		// }
-		// else if ((event.results[i][0].transcript == 'английский') && (recognizer.lang == 'ru-RU')) {
-		// 	recognizer.lang == 'en-GB';
-		// 	started = false;
-		// 	recognizer.stop();
-		// }
 	  output.textContent = event.results[i][0].transcript; //+ ' (Confidence: ' + event.results[i][0].confidence + ')';
 	} else {
 	  output.textContent += event.results[i][0].transcript;
@@ -82,7 +72,6 @@ recognizer.onresult = function(event) {
 		wraps[1].style.display = "none";
 		wraps[2].style.display = "none";
 		wraps[0].style.backgroundImage = "none";
-		///
 	}
 
   }
@@ -116,8 +105,6 @@ document.getElementById('record').addEventListener('click', function() {
 			// alert(ex.message);
 		 //  }
 	}
-
-  // recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
 });
 
 
@@ -244,39 +231,6 @@ function doneEncoding( blob ) {
 	recIndex++;
 	sendPostReq(blob);//using yandex api
 }
-
-// function toggleRecording( e ) {
-//     if (started) {
-//         started = false;
-//         recognizer.stop();
-//     }else {
-//         started = true;
-//         output.textContent = '';
-//     }
-
-//   // recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
-//   recognizer.interimResults = true;
-
-//   try {
-//     recognizer.start();
-//   } catch(ex) {
-//     alert(ex.message);
-//   }
-// }
-	// if (e.classList.contains("recording")) {
-	// 	// stop recording
-	// 	audioRecorder.stop();
-	// 	e.classList.remove("recording");
-	// 	audioRecorder.getBuffers( gotBuffers );
-	// } else {
-	// 	// start recording
-	// 	if (!audioRecorder)
-	// 		return;
-	// 	e.classList.add("recording");
-	// 	audioRecorder.clear();
-	// 	audioRecorder.record();
-	// }
-// }
 
 
 function convertToMono( input ) {
