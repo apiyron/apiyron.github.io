@@ -49,9 +49,10 @@ recognizer.onresult = function(event) {
   for (var i = event.resultIndex; i < event.results.length; i++) {
 	if (event.results[i].isFinal) {
 	  output.textContent = event.results[i][0].transcript; //+ ' (Confidence: ' + event.results[i][0].confidence + ')';
-	} else {
-	  output.textContent += event.results[i][0].transcript;
 	}
+	// else {
+	//   output.textContent += event.results[i][0].transcript;
+	// }
 	if ((output.textContent == 'Russian') && (recognizer.lang == 'en-GB')) {
 		started = false;
 		recognizer.stop();
