@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Audio Recorder</title>
+		<title>Speech Recogniser</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
@@ -13,12 +13,6 @@
 		<div id="controls">
 			<img id="record" src="src/mic.svg"  class="">
 			<img id="play" src="src/play.svg"  class="">
-			
-			<!-- <div align="center" id="lol">
-					<button>Произнести</button>
-			</div> -->
-			<!-- <div id="button"></div> -->
-			<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
 		</div>
 
 		<div id="text"></div>
@@ -27,13 +21,14 @@
 		<script src="src/main.js"></script>
 
 		<script type="text/javascript">
-			document.getElementById('lol').addEventListener('click', function() {
+			document.getElementById('play').addEventListener('click', function() {
 				var u = new SpeechSynthesisUtterance();
 				u.text = document.getElementById('output').value;
 				//u.lang = 'ru-RU';
 				speechSynthesis.speak(u);
 			})
 		</script>
+		<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
 		<!-- <div id="viz">
 			<div id="photos">
 				<div class="wrap">
