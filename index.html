@@ -8,13 +8,13 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
-		<textarea id="output" wrap="soft"  onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea>
+		<textarea id="output" wrap="soft"  oninput="textAreaAdjust(this)" style="overflow:hidden"></textarea>
 		<div id="controls">
 			<img id="record" src="src/mic.svg"  class="">
 			<img id="play" src="src/play.svg"  class="">
 			<img onclick="sendMail(); return false" id="email" src="src/email.svg">
 		</div>
-	
+
 		<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
 
 
