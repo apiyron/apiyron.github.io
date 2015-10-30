@@ -12,6 +12,11 @@
 
 		<div id="controls">
 			<img id="record" src="src/mic.svg"  class="">
+			<img id="play" src="src/play.svg"  class="">
+			
+			<!-- <div align="center" id="lol">
+					<button>Произнести</button>
+			</div> -->
 			<!-- <div id="button"></div> -->
 			<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
 		</div>
@@ -20,16 +25,14 @@
 		<script src="src/audiodisplay.js"></script>
 		<script src="src/recorder.js"></script>
 		<script src="src/main.js"></script>
-		<div align="center" class="button">
-				<button>Произнести</button>
-		</div>
+
 		<script type="text/javascript">
-			document.getElementsByTagName('button').addEventListener('click', function() {
+			document.getElementById('lol').addEventListener('click', function() {
 				var u = new SpeechSynthesisUtterance();
 				u.text = document.getElementById('output').value;
-				u.lang = 'ru-RU';
+				//u.lang = 'ru-RU';
 				speechSynthesis.speak(u);
-			}
+			})
 		</script>
 		<!-- <div id="viz">
 			<div id="photos">
