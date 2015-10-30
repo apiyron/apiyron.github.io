@@ -28,7 +28,7 @@ body {
 .tag {
 	display: inline-block;
 	width: 40vh;
-	height: 15vh;
+	height: auto;
 	text-align: center;
 	display: none;
 	/*background: #202020;
