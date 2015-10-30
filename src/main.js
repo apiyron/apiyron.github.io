@@ -44,11 +44,11 @@ recognizer.onerror = function(event) {
 };
 
 recognizer.onresult = function(event) {
-  output.textContent += "\&#010;";
+  //output.textContent += "\&#010;";
 
   for (var i = event.resultIndex; i < event.results.length; i++) {
 	if (event.results[i].isFinal) {
-	  output.textContent = event.results[i][0].transcript; //+ ' (Confidence: ' + event.results[i][0].confidence + ')';
+	  output.textContent += event.results[i][0].transcript; //+ ' (Confidence: ' + event.results[i][0].confidence + ')';
 	}
 	// else {
 	//   output.textContent += event.results[i][0].transcript;
