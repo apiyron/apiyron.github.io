@@ -44,7 +44,7 @@ recognizer.onerror = function(event) {
 };
 
 recognizer.onresult = function(event) {
-  //output.textContent = '';
+  output.textContent += "\&#010;";
 
   for (var i = event.resultIndex; i < event.results.length; i++) {
 	if (event.results[i].isFinal) {
