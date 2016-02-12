@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from http://webaudiodemos.appspot.com/AudioRecorder/index.html -->
+
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,20 +8,45 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 <body>
-		<textarea id="output" wrap="soft"  oninput="textAreaAdjust(this)" style="overflow:auto"></textarea>
+		<textarea id="output" wrap="soft" onClick="SelectAll('output');" oninput="textAreaAdjust(this)" style="overflow:auto"></textarea>
 		<div id="controls">
+			<input type="button" value="Начать запись" id="startRecord" onClick="startRecord;">
+			<br>
+			<input type="button" value="Остановить запись" id="stopRecord" onClick="stopRecord;">
+			<br>
 			<img id="record" src="src/mic.svg"  class="">
 			<img id="play" src="src/play.svg"  class="">
 			<img onclick="sendMail(); return false" id="email" src="src/email.svg">
+			<img onclick="turnAnnyang(); return false" id="wrench" src="src/wrench.png">
 		</div>
+<script src="src/main.js"></script>
+<script type="text/javascript">
+	document.getElementById('startRecord').addEventListener('click', function() {
+		document.getElementById('record').classList.add('recording');
+		started = true;
+		//output.textContent = '';
+			recognizer.interimResults = true;
+			recognizer.start();
+		})
+	document.getElementById('stopRecord').addEventListener('click', function() {
+		document.getElementById('record').classList.remove('recording');
+		started = false;
+		recognizer.stop();
+		// alert(output.textContent.split(' '));
+		output.textContent.split(' ').forEach(function(item, i, arr) {
+				sendWord(item, i);
+			})
+		})
 
-		<!-- <a id="save" href="" download="myRecording00.wav"><img src="./Audio Recorder_files/save.svg"></a> -->
+</script>
 
 
-		<script src="src/audiodisplay.js"></script>
-		<script src="src/recorder.js"></script>
-		<script src="src/main.js"></script>
 
+
+
+
+
+		<!-- <script><onClick="getElementById('output').select();"></script> -->
 		<script type="text/javascript">
 			document.getElementById('play').addEventListener('click', function() {
 				var u = new SpeechSynthesisUtterance();
@@ -38,9 +63,10 @@
 							 + "&subject=" + escape("Speech Recognition Results")
 							 + "&body=" + escape(document.getElementById('output').value)
 							 ;
-
-				//window.location.href = link;
-				window.open(link,"_self")
+				window.open(link)
+			}
+			function turnAnnyang() {
+				window.location.href = './annyang.html'
 			}
 		</script>
 		<script>
@@ -49,8 +75,12 @@
 		    o.style.height = (25+o.scrollHeight)+"px";
 		}
 		</script>
-
-
-
+		<script type="text/javascript">
+			function SelectAll(id)
+			{
+			    document.getElementById(id).focus();
+			    document.getElementById(id).select();
+			}
+		</script>
 </body>
 </html>

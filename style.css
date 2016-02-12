@@ -65,7 +65,7 @@ textarea {
 #play {
 	height: 12vh;
 }
-#email {
+#email,#wrench {
 	height: 12vh;
 	width: 12vh;
 	margin-top: 0.1vh;

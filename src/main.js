@@ -25,7 +25,7 @@ var analyserContext = null;
 var canvasWidth, canvasHeight;
 var recIndex = 0;
 
-var wraps = document.getElementsByClassName('wrap');/////////////////
+//var wraps = document.getElementsByClassName('wrap');/////////////////
 
 window.SpeechRecognition = window.SpeechRecognition       ||
 						   window.webkitSpeechRecognition ||
@@ -44,7 +44,7 @@ recognizer.onerror = function(event) {
 };
 
 recognizer.onresult = function(event) {
-  //output.textContent += "\&#010;";
+  // output.textContent += "\&#010;";
 
   for (var i = event.resultIndex; i < event.results.length; i++) {
 	if (event.results[i].isFinal) {
@@ -53,60 +53,60 @@ recognizer.onresult = function(event) {
 	// else {
 	//   output.textContent += event.results[i][0].transcript;
 	// }
-	if ((output.textContent == 'Russian') && (recognizer.lang == 'en-GB')) {
-		started = false;
-		recognizer.stop();
-		recognizer.lang = 'ru-RU';
-		document.getElementById('record').classList.remove('recording');
-		alert('Язык: Русский');
-		break;
-	}
-	else if ((output.textContent == 'английский') && (recognizer.lang == 'ru-RU')) {
-		started = false;
-		recognizer.stop();
-		recognizer.lang = 'en-GB';
-		document.getElementById('record').classList.remove('recording');
-		alert('Language: English');
-		break;
-	}
-	else if ((output.textContent == 'сброс') || (output.textContent == 'reset')) {
-		wraps[1].style.display = "none";
-		wraps[2].style.display = "none";
-		wraps[0].style.backgroundImage = "none";
-	}
+	// if ((output.textContent == 'Russian') && (recognizer.lang == 'en-GB')) {
+	// 	started = false;
+	// 	recognizer.stop();
+	// 	recognizer.lang = 'ru-RU';
+	// 	document.getElementById('record').classList.remove('recording');
+	// 	alert('Язык: Русский');
+	// 	break;
+	// }
+	// else if ((output.textContent == 'английский') && (recognizer.lang == 'ru-RU')) {
+	// 	started = false;
+	// 	recognizer.stop();
+	// 	recognizer.lang = 'en-GB';
+	// 	document.getElementById('record').classList.remove('recording');
+	// 	alert('Language: English');
+	// 	break;
+	// }
+	// else if ((output.textContent == 'сброс') || (output.textContent == 'reset')) {
+	// 	wraps[1].style.display = "none";
+	// 	wraps[2].style.display = "none";
+	// 	wraps[0].style.backgroundImage = "none";
+	// }
 
   }
 };
 
-document.getElementById('record').addEventListener('click', function() {
-	if (started) {
-		this.classList.remove('recording');
-		started = false;
-		recognizer.stop();
-		// alert(output.textContent.split(' '));
-		output.textContent.split(' ').forEach(function(item, i, arr) {
-			if(wraps[i]) {
-				// alert(i);
-				wraps[i].style.display = "flex";
-				sendWord(item, i);
-			}
-			})
-
-		// sendWord();
-	}else {
-		this.classList.add('recording');
-		started = true;
-		//output.textContent = '';
-		  recognizer.interimResults = true;
-		  recognizer.start();
-
-		 //  try {
-			// recognizer.start();
-		 //  } catch(ex) {
-			// alert(ex.message);
-		 //  }
-	}
-});
+// document.getElementById('record').addEventListener('click', function() {
+// 	if (started) {
+// 		this.classList.remove('recording');
+// 		started = false;
+// 		recognizer.stop();
+// 		// alert(output.textContent.split(' '));
+// 		output.textContent.split(' ').forEach(function(item, i, arr) {
+// 			if(wraps[i]) {
+// 				// alert(i);
+// 				// wraps[i].style.display = "flex";
+// 				sendWord(item, i);
+// 			}
+// 			})
+//
+// 		// sendWord();
+// 	}else {
+// 		this.classList.add('recording');
+// 		started = true;
+// 		//output.textContent = '';
+// 		  recognizer.interimResults = true;
+// 		  recognizer.start();
+//
+// 		 //  try {
+// 			// recognizer.start();
+// 		 //  } catch(ex) {
+// 			// alert(ex.message);
+// 		 //  }
+// 	}
+// });
 
 
 
@@ -207,8 +207,8 @@ function sendWord(data, num){
 		}
 	}
 	//"/asr_xml?uuid=01ae13cb744628b58fb536d496daa1e6&key=developers-simple-key&topic=maps"
-	xmlhttp.open("GET","https://api.instagram.com/v1/tags/"+data+"/media/recent?client_id=c9f5ad458cff4c65b790e2c9f1d701a8", true);
-	xmlhttp.send(null);
+	// xmlhttp.open("GET","https://api.instagram.com/v1/tags/"+data+"/media/recent?client_id=c9f5ad458cff4c65b790e2c9f1d701a8", true);
+	// xmlhttp.send(null);
 }
 
 function saveAudio() {
