@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test page</title>
-
-</head>
-<body>
-
-<h1>Test</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-Labore illum veritatis quae quisquam quaerat rerum vero eaque ipsum maiores quam, 
-perspiciatis quibusdam itaque quia. Deleniti repellendus molestiae consequuntur natus cupiditate.</p>
-
-</body>
-</html>
-
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
