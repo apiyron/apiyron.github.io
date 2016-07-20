@@ -1,0 +1,554 @@
+@font-face {
+	font-family: Gotham-Bk;
+	src: url(../fonts/Gotham-Bk.otf);
+}
+@font-face {
+	font-family: GothaProBol;
+	src: url(../fonts/GothaProBol.otf);
+}
+@font-face {
+	font-family: GothaProMed;
+	src: url(../fonts/GothaProMed.otf);
+}
+@font-face {
+	font-family: GothaProReg;
+	src: url(../fonts/GothaProReg.otf);
+}
+
+body, html {
+	background-color: #fff;
+	font: 17px GothaProMed;
+	color: #000;
+	text-transform: uppercase;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.menu_background{ 
+	
+	opacity: 0.99; 
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	bottom: 0; 
+	padding: 16px; 
+	background-color: rgba(1, 1, 1, 0.725); 
+	z-index: 100; 
+	overflow: auto; 
+}
+.menu_background:hover{
+	cursor: pointer;
+}
+.menu_background:hover + .block .krestik_absolut .krestik {
+	background: url(../images/krest_red.png);
+}
+
+.menu{
+	z-index: 300;
+	overflow: visible !important;
+}
+.menu_bar_block{ 
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 200;
+    position: fixed;
+    /* right: 50%; */
+    left: 0;
+    top: 0;
+    /* bottom: 0; */
+    /* margin: auto; */
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+#wrapper {
+	width: 1023px;
+	margin: 0 auto;
+}
+#heder1{
+	width: 100%;
+	height: 90px;
+}
+#header {
+	position: fixed;
+    color: #fff;
+    background: #fdda44;
+    font-weight: bold;
+    font: 14.4px GothaProBol;
+    height: 90px;
+    -webkit-box-shadow: 0px 4px 13px 0px rgba(50, 50, 50, 0.28);
+    -moz-box-shadow: 0px 4px 13px 0px rgba(50, 50, 50, 0.28);
+    box-shadow: 0px 4px 13px 0px rgba(50, 50, 50, 0.28);
+    width: 100%;
+    z-index: 1;
+}
+#header #centralize {
+	width: 1200px;
+	margin: 0 auto;
+}
+#header ul {
+	list-style: none;
+	margin: 0;
+	padding: 35px 0;
+}
+#header ul li {
+	display: inline-block;
+    margin-left: 34px;
+}
+#header ul li:first-child {
+    margin-left: 124px;
+}
+#header ul li a {
+	cursor: pointer;
+	color: #fff;
+}
+#header ul li a:hover {
+	color: #FF181F;
+}
+#header ul li a.active {
+	color: #e31e24;
+}
+#header .callback {
+	float: right;
+	margin-top: 22px;
+    font-family:GothaProMed !important; 
+    font-size: 13.5px;
+    padding-right: 122px;
+}
+#header .callback .trial_lesson {
+    background: #f6a20a;
+    display: table-cell;
+    vertical-align: middle;
+    width: 232px;
+    height: 40px;
+    text-align: center;
+    margin-right: 255px;
+    color: #fff;
+    cursor: pointer;
+}
+#header .callback .trial_lesson:hover {
+	background-color: #FF181F;
+	color: #fff;
+}
+#header .callback .number {
+    font-size: 14.4px;
+    position: relative;
+	font: 16px GothaProBol;
+    z-index: 2;
+    float: right;
+    top: 9px;
+    padding-left: 21px;
+}
+#header .callback .number a {
+	color: #fff;
+}
+#header .callback .number:before {
+	content: ' ';
+    background: url(../images/icon_phone.png) no-repeat;
+    background-size: 24px;
+    width: 35px;
+    height: 31px;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+    left: 12px;
+}
+
+
+
+
+
+
+
+
+#content {
+	display: table-cell;
+	vertical-align: top;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	letter-spacing: -0.3em;
+	line-height: 0;
+}
+.block{    
+	width: 511px;
+    height: 421px;
+	vertical-align: center;
+	display: inline-block;
+	overflow: hidden;
+	letter-spacing: normal;
+	line-height: normal;
+}
+
+
+.title
+{
+    font-size: 16.8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+	font-family: GothaProBol;
+}
+
+#block_1 {
+	background: url(../images/people.png) center top no-repeat;
+	background-color: #f6a20a;
+    background-size: cover;
+}
+#block_2 {
+	background: url(../images/logo.png) center no-repeat;
+    background-position-x: 50%;
+    background-size: 266px;
+    background-position-y: 30%;
+}
+#block_3 {
+	text-align: center;
+	background-color: #fff;
+}
+.title {
+	text-align: center;
+	font-size: 16.8px;
+}
+#block_3 ul
+{
+    width: 521px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 13.4px;
+    font-family: GothaProReg;
+}
+#block_3 .title
+{
+    font-size: 16.8px;    
+    margin-top: 40px;
+    margin-bottom: 40px;
+	font-family: GothaProBol;
+}
+#block_3 ul li
+{
+	list-style-image: url(../images/li.png);
+    margin-left: 100px;
+    margin-bottom: 15px;
+	padding-left: 5px;
+}
+#block_3 {
+	background-color: #fff;
+}
+#block_4 {
+	background-color: #fdda44;
+	text-align: center;
+}
+#block_4 .title
+{
+    font-size: 16.8px;    
+    margin-top: 40px;
+    margin-bottom: 40px;
+	font-family: GothaProBol;
+}
+#block_4  iframe {
+	width: 330px !important;
+    height: 245px !important;
+	margin: 0 auto;
+}
+#block_5 {
+	background: url(../images/skull.png) center no-repeat;
+	background-color: #f6a20a;
+    background-size: 174px;
+}
+#block_6 {
+	background-color: #fff;
+}
+#block_6 .title
+{
+    font-size: 16.8px;    
+    margin-top: 40px;
+    margin-bottom: 40px;
+	font-family: GothaProBol;
+}
+#block_6 table {
+	font-family: GothaProReg;
+	font-size: 13.4px;
+	vertical-align: top;
+	margin: 0 auto;
+	width: 340px;
+	height: 265px;
+}
+
+#block_6 table tr {
+	vertical-align: top;
+}
+#block_6 table tr.head td {
+	font-family: GothaProMed !important;
+	font-size: 16.9px !important;
+}
+#block_6 table tr.head td:first-child {
+	padding-left: 30px;
+}
+#block_6 table tr td.price {
+	color: #FF181F;
+}
+#block_7 {
+	background-color: #fff;
+}
+
+
+#block_7 .slider {
+	margin: 0 auto;
+	width: 430px;
+	height: 212px;
+	letter-spacing: -0.3em;
+	line-height: 0;
+}
+
+
+#block_7 #previous {
+	background: url(../images/yellow_arrow_left.png) left no-repeat;
+	width: 50px;
+	height: 100%;
+    background-size: 17px;
+	display: inline-block;
+}
+#block_7 #next {
+	background: url(../images/yellow_arrow_right.png) right no-repeat;
+	width: 50px;
+	height: 100%;
+    background-size: 17px;
+	display: inline-block;
+}
+
+#block_7 #previous:hover{
+	background: url(../images/red_arrow_left.png) left no-repeat;
+    background-size: 17px;
+    cursor: pointer;
+}
+#block_7 #next:hover {
+	background: url(../images/red_arrow_right.png) right no-repeat;
+    background-size: 17px;
+    cursor: pointer;
+}
+
+#block_7 .slider_page {
+	
+	width: 330px;
+	height: 212px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#block_7 .slider_page .slider_page1{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#block_7 .slider_page .slider_page1:first-child {
+	display: block;
+}
+
+#block_7 .slider_page img{
+	width: 155px;
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+#block_7 .slider_page .name{
+	width: 175px;
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+	letter-spacing: normal;
+	line-height: normal;
+	font-family: GothaProReg;
+	font-size: 13.5px;
+}
+#block_7 .slider_page .name .name_human{
+	width: 204px;
+	height: 45px;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #FF181F;
+	text-align: center;
+	color: #fff;
+}
+#block_7 .slider_page .name ul li{
+	padding: 15px 0 0px 20px;
+	line-height: 24px;
+}
+
+
+
+#block_8 {
+	background-color: #fdda44;
+}
+
+#block_8 .slider {
+
+	margin: 0 auto;
+	width: 430px;
+	height: 277px;
+	letter-spacing: -0.3em;
+	line-height: 0;
+	vertical-align: top;
+}
+
+
+#block_8 #previous {
+	background: url(../images/white_arrow_left.png) left no-repeat;
+	width: 50px;
+	height: 212px;
+	margin: auto 0;
+    background-size: 17px;
+    float: left;
+}
+
+#block_8 #previous:hover{
+	background: url(../images/red_arrow_left.png) left no-repeat;
+    background-size: 17px;
+    cursor: pointer;
+}
+#block_8 #next:hover {
+	background: url(../images/red_arrow_right.png) right no-repeat;
+    background-size: 17px;
+    cursor: pointer;
+}
+#block_8 #next {
+	background: url(../images/white_arrow_right.png) right no-repeat;
+	width: 50px;
+	height: 212px;
+    background-size: 17px;
+    float: right;
+}
+
+#block_8 .slider_page {
+	width: 330px;
+	height: 244px;
+    float: left;
+    overflow: hidden;
+}
+#block_8 img {
+	width:  100%;
+	height:  100%;
+	display: none;
+}
+#block_8 img:first-child {
+	display: block;
+}
+
+#block_9 {
+	text-align: center;
+	background-color: #f6a20a;
+}
+
+#block_9 .title{
+	margin-top: 100px;
+	margin-bottom: 25px;
+}
+
+#block_9 input {
+	height: 40px;
+	background-color: #fff;
+	text-align: center;
+	color: #a8a8a8;
+	width: 233px;
+	padding: 10px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	border: none;
+    font-size: 13.5px;
+}
+#block_9 button {
+	margin-top: 5px;
+	background-color: #fdda44;
+	width: 233px;
+	height: 40px;
+	color: #000;
+	text-align: center;
+	font-size: 15.4px;
+	font-family: GothaProMed;
+	border: 0;
+	text-transform: uppercase;
+    font-size: 13.5px;
+}
+#block_9 button:hover{
+	background-color: #FF181F;
+	color: #fff;
+	cursor: pointer;
+}
+
+#block_10 .title{
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+#block_10 .info {
+	margin: auto;
+    width: 390px;
+	height: 170px;
+	font-family:GothaProReg;
+	font-size: 13.5px; 
+}
+
+#block_10 .map {
+	width: 165px;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+}
+
+#block_10 .map iframe{
+	width: 100%;
+	height: 100%;
+}
+#block_10 ul {float: left;
+}
+#block_10 ul img {
+    vertical-align: middle;
+    margin-bottom: 2px;
+    margin-right: 6px;
+    width: 22px;
+}
+#block_10 ul li {
+
+	list-style-type: none;
+	padding-left: 7px;
+	margin-bottom: 10px;
+}
+#footer {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 10px;
+	color: #8e8e8e;
+	font-family: Gotham-Bk;
+}
+
+.krestik{
+	position: relative;
+	background: url(../images/krest_white.png);
+	    background-size: cover !important;
+
+	height: 27px;
+	width: 27px;  
+    top: -38px;
+    left: 597px;
+}
+.krestik_absolut{
+	position: absolute;
+}
+
+.krestik:hover {
+	cursor: pointer;
+	background: url(../images/krest_red.png);
+}
